@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+}
+
+.fonteEspecial{
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 170px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Sketch Block";
+    src: url("/src/js/fonts/Sketch_Block.ttf");
+}
+
+.fontePlayers{
+    font-family: 'Sketch Block';
+    font-size: 50px;
+    color: #EFD473;
+    text-align: center;
+    position: fixed;
+    left: 77%;
+    width: 175px;
+    height: 78px;
+}
+
+.Players-Frist{
+    top: 33%;
+}
+
+.Players-Second{
+    top: 50%;
+}
+
+.fontePlacar{
+    font-family: 'Sketch Block';
+    font-size: 50px;
+    color: #EFD473;
+    text-align: center;
+    position: fixed;
+    top: 68%;
+    width: 175px;
+    height: 78px;
+}
+
+.Placar-Frist{
+    left: 84%;
+}
+
+.Placar-Second{
+    left: 71.5%;
+}
+
+.boardGame{
+    background-image: url('/src/js/img/board.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 100%;
+}
+
+.btnSair{
+    position: fixed;
+    top: 84.5%;
+    left: 79%;
+    background-image: url('/src/js/img/btn-exit.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 78px;
+}
+
+.gridGame{
+    position: relative;
+    background-image: url('/src/js/img/grid.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10%;
+    margin-left: 15%;
+    height: 65%;
+    width: 40%;
+}
