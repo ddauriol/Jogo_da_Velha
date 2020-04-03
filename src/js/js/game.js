@@ -95,8 +95,8 @@ var win = {
     ]
 }
 
-var player = 1
-var vencedor = ''
+let player = 1
+let vencedor = ''
 
 // Monitorando clicks
 document.addEventListener('click', function (e) {
@@ -116,13 +116,13 @@ document.addEventListener('click', function (e) {
                     if (value == 0) {
                         if (player == 1) {
                             dashboard[key] = 1
-                            document.getElementById(key).innerHTML = '<h1 id=' + key + ' class="fonteEspecial">X</h1>'
+                            document.getElementById(key).innerHTML = '<h1 id=' + key + ' style="font-size: 15vh;">x</h1>'
                             player = 2
                             return
                         }
                         if (player == 2) {
                             dashboard[key] = 2
-                            document.getElementById(key).innerHTML = '<h1 id=' + key + ' class="fonteEspecial">0</h1>'
+                            document.getElementById(key).innerHTML = '<h1 id=' + key + ' style="font-size: 15vh;">o</h1>'
                             player = 1
                             return
                         }
@@ -169,3 +169,4 @@ document.addEventListener('click', function (e) {
 
     }
 }, false);
+

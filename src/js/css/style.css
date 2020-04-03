@@ -12,12 +12,15 @@
 @font-face {
     font-family: "Sketch Block";
     src: url("/src/js/fonts/Sketch_Block.ttf");
+
     font-family: "Made With";
     src: url("/src/js/fonts/MadeWithB.ttf");
+    
+    font-family: "Sleep on the moon";
+    src: url("/src/js/fonts/SleepOnTheMoon.ttf");
+
     font-family: "Pencil Pete";
     src: url("/src/js/fonts/PPETRIAL.ttf");
-    font-family: "Sleep on the moon";
-    src: url("/src/js/fonts/Sleep\ on\ the\ moon.ttf");
 }
 
 html, body{
@@ -29,6 +32,14 @@ html, body{
 .w-85 {
     width: 85% !important
 }
+
+.h-65 {
+    height: 65% !important
+}
+.h-33 {
+    height: 33% !important
+}
+
 
 .mainMenuBackGroud{
     background-image: url('/src/js/img/main/background.png');
@@ -174,11 +185,13 @@ html, body{
     height: 90%;
 }
 
-.fonteEspecial{
+.GameMark{
     font-family: 'Pencil Pete';
     color: var(--color-branca);
-    font-size: 1.5vw;
+    font-size: 80px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .NamePlayers{
@@ -246,10 +259,8 @@ html, body{
 .gridGame{
     position: relative;
     background-image: url('/src/js/img/game/grid.png');
-    background-size: cover;
+    background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 50%;
-    width: 50%;
 }
 

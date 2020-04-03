@@ -6,6 +6,8 @@ const MensagemAlert = document.getElementById('MensagemAlert')
 const Alert = document.getElementById('Alert')
 const NamePlayerOne = document.getElementById('NamePlayerOne')
 const NamePlayerTwo = document.getElementById('NamePlayerTwo')
+const NamePlayerOneLabel = document.getElementById('NamePlayerOneLabel')
+const NamePlayerTwoLabel = document.getElementById('NamePlayerTwoLabel')
 const mainMenu = document.getElementById('mainMenu')
 const gameBoard = document.getElementById('gameBoard')
 const ScorePlayerOne = document.getElementById('ScorePlayerOne')
@@ -14,8 +16,8 @@ const ScorePlayerTwo = document.getElementById('ScorePlayerTwo')
 
 let ScoreMaxValue = 0
 let NumberPlayes = 2
-let NamePlayerOneValue = NamePlayerOne.value
-let NamePlayerTwoValue = NamePlayerTwo.value
+let NamePlayerOneValue = ''
+let NamePlayerTwoValue = ''
 let ScorePlayerOneValue = 0
 let ScorePlayerTwoValue = 0
 
@@ -37,6 +39,9 @@ document.addEventListener('click', function(e) {
     }
     if (TextId == 'btnJogar'){
         PlayGame()
+    }
+    if (TextId == 'btnSair'){
+        ExitGame()
     }
 }, false);
 
@@ -72,9 +77,8 @@ function LessScoreMax(){
     ScoreMax.innerHTML = ScoreMaxValue
 }
 
-function PlayGame(){
-    NamePlayerOneValue = NamePlayerOne.value
-    NamePlayerTwoValue = NamePlayerTwo.value
+async function PlayGame(){
+    getPlayerNames()
     var msgErro = 'Necessário um nome de usuário.'
 
     if (NumberPlayes == 1){
@@ -93,9 +97,20 @@ function PlayGame(){
 
 }
 
-function loadGameBoard(){
+async function loadGameBoard(){
     mainMenu.style.display = 'none'
     gameBoard.style.display = 'Block'
+    getPlayerNames()
+    NamePlayerTwoLabel.innerHTML = NamePlayerTwoValue
+    NamePlayerOneLabel.innerHTML = NamePlayerOneValue
+}
+
+function ExitGame(){
+    mainMenu.style.display = 'Block'
+    gameBoard.style.display = 'none'
+    TwoPlayeres()
+    ResetScoreMax()
+    UpdateScore()    
 }
 
 function sendAlert(MSG){
@@ -111,6 +126,17 @@ function UpdateScore(){
     ScorePlayerTwo.innerHTML = ScorePlayerTwoValue
 }
 
+function getPlayerNames(){
+    if (NumberPlayes == 2){
+        NamePlayerTwoValue = NamePlayerTwo.value
+    }else{
+        NamePlayerTwoValue = "BOT"
+    }
+    NamePlayerOneValue = NamePlayerOne.value
+    
+}
+
 TwoPlayeres()
 ResetScoreMax()
 UpdateScore()
+getPlayerNames()
