@@ -13,7 +13,6 @@ const gameBoard = document.getElementById('gameBoard')
 const ScorePlayerOne = document.getElementById('ScorePlayerOne')
 const ScorePlayerTwo = document.getElementById('ScorePlayerTwo')
 
-
 let ScoreMaxValue = 0
 let NumberPlayes = 2
 let NamePlayerOneValue = ''

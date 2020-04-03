@@ -142,8 +142,9 @@ document.addEventListener('click', function (e) {
             });
             if (sum_x == 3) {
                 console.log('Jogador X - ' + sum_x)
-                vencedor = 'Jogador X'
-                document.getElementById('div_resultadoModal').innerText = 'O ' + vencedor + ' ganhou.'
+                getPlayerNames()
+                vencedor = NamePlayerOneValue
+                document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerOneValue + ' ganhou.'
                 $('#resultadoModal').modal('show')
                 return
             }
@@ -160,8 +161,9 @@ document.addEventListener('click', function (e) {
             });
             if (sum_o == 3) {
                 console.log('Jogador O - ' + sum_o)
-                vencedor = 'Jogador O'
-                document.getElementById('div_resultadoModal').innerText = 'O ' + vencedor + ' ganhou.'
+                getPlayerNames()
+                vencedor = NamePlayerTwoValue
+                document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerTwoValue + ' ganhou.'
                 $('#resultadoModal').modal('show')
                 return
             }
@@ -170,3 +172,10 @@ document.addEventListener('click', function (e) {
     }
 }, false);
 
+function restartGrid(){
+    Object.entries(dashboard).forEach(([key, value]) => {
+        dashboard[key] = 0
+        document.getElementById(key).innerHTML = '<h1 id=' + key + ' style="font-size: 15vh;">&nbsp;</h1>'
+    });
+    
+}
