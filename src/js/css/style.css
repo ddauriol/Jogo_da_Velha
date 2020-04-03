@@ -16,6 +16,8 @@
     src: url("/src/js/fonts/MadeWithB.ttf");
     font-family: "Pencil Pete";
     src: url("/src/js/fonts/PPETRIAL.ttf");
+    font-family: "Sleep on the moon";
+    src: url("/src/js/fonts/Sleep\ on\ the\ moon.ttf");
 }
 
 html, body{
@@ -57,9 +59,38 @@ html, body{
     height: 5.5%;
 }
 
+.mainMenuSelectJogadores{
+    position: relative;
+    top: 32.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainMenuBtnSelectJogadores{
+    position: relative;
+    text-align: center;
+    font-family: 'Pencil Pete';
+    color: var(--color-verde);
+    font-size: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainMenuBtnSelectJogadores:hover{
+    color: var(--color-vermelha) !important;
+}
+.mainMenuSelectedJogadores{
+    background-image: url('/src/js/img/main/selected.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 1.5vh;
+}
+
 .mainMenuCardJogador{
     position: relative;
-    top: 45%;
+    top: 37.5%;
     background-image: url('/src/js/img/main/quadro_jogador.png');
     background-size: 100%;
     background-repeat: no-repeat;
@@ -93,7 +124,7 @@ html, body{
 .mainMenuInput{
     font-family: 'Indie Flower', cursive;
     background-color: black;
-    color: var(--color-amarela);
+    color: var(--color-branca);
     margin-left: 5%;
     margin-top: 6px;
     border: 0px;
@@ -150,76 +181,75 @@ html, body{
     text-align: center;
 }
 
-.fontePlayers{
+.NamePlayers{
     font-family: 'Sketch Block';
-    font-size: 50px;
-    color: #EFD473;
+    font-size: 2.5vw;
+    color:var(--color-amarela);
     text-align: center;
-    position: fixed;
-    left: 77%;
-    width: 175px;
-    height: 78px;
+    position: relative;
 }
 
-.Players-Frist{
-    top: 33%;
+.NamePlayers-Frist{
+    top: 35vh;
 }
 
-.Players-Second{
-    top: 50%;
+.NamePlayers-Second{
+    top: 42.5vh;
 }
 
-.fontePlacar{
+.LabelScore{
     font-family: 'Sketch Block';
-    font-size: 50px;
-    color: #EFD473;
+    font-size: 6vh;
+    color: var(--color-amarela);
     text-align: center;
-    position: fixed;
-    top: 68%;
-    width: 175px;
-    height: 78px;
+    position: relative;
+    top: 50vh;
 }
 
-.Placar-Frist{
-    left: 84%;
+.FlagScorePoss{
+    position: relative;
+    top: 48vh;
 }
 
-.Placar-Second{
-    left: 71.5%;
+.FlagScore{
+    height: 8vh;
+    background-image: url('/src/js/img/game/flag.png');
+    background-size: 36%;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .boardGame{
-    background-image: url('/src/js/img/board.png');
-    background-size: cover;
+    background-image: url('/src/js/img/game/Board-BackGround.png');
+    background-size: 100%;
     background-repeat: no-repeat;
-    margin: auto;
-    height: 100%;
+    background-position: center;
+}
+
+.cardBtnSair{
+    position: relative;
+    width: 100%;
+    top: 50vh;
+    text-align: center;
+    align-items: center;
 }
 
 .btnSair{
-    position: fixed;
-    top: 84.5%;
-    left: 79%;
+    margin: auto;
     background-image: url('/src/js/img/btn-exit.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 175px;
-    height: 78px;
+    width: 8.5vw;
+    height: 7vh;
 }
 
 .gridGame{
     position: relative;
-    background-image: url('/src/js/img/grid.png');
+    background-image: url('/src/js/img/game/grid.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 10%;
-    margin-left: 15%;
-    height: 65%;
-    width: 40%;
-}
-
-.fill{
-    
+    height: 50%;
+    width: 50%;
 }
 

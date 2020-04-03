@@ -18,10 +18,21 @@
 </head>
 
 <body>
-    <div class="container-fluid h-100 w-85">
+    <div id="mainMenu" class="container-fluid h-100 w-85" style="display: none;">
+        <div  id="Alert" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+            <strong id="MensagemAlert"></strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
         <div class="row h-100 mainMenuBackGroud">
-            <div class="col-1">1</div>
-            <div class="col-2">
+            <div class="col-1"></div>
+            <div class="col-2 text-center">
+                <div class="mainMenuSelectJogadores">
+                    <button id='btnOnePlayer' class="btn mainMenuBtnSelectJogadores" type="submit">Um Jogador</button>
+                    <div id='SelectedOnePlayer' class="mainMenuSelectedJogadores"></div>
+                </div>
                 <div class="mainMenuCardJogador">
                     <div class="row">
                         <h4 class="mainMenuFontJogador">Jogador 1</h4>
@@ -31,7 +42,7 @@
                     </div>
                     <div class="row mainMenuInputJogador">
                         <form action="" class="">
-                            <input type="text" class="mainMenuInput">
+                            <input id="NamePlayerOne" type="text" class="mainMenuInput">
                         </form>
                     </div>
                     <div class="row">
@@ -40,10 +51,15 @@
                 </div>
             </div>
             <div class="col-1">
-                <button class="btn mainMenuBtnJogar" type="submit"></button>
+                <button id="btnJogar" class="btn mainMenuBtnJogar" type="submit"></button>
             </div>
             <div class="col-2">
-                <div class="mainMenuCardJogador">
+                <div class="mainMenuSelectJogadores">
+                    <button id='btnTwoPlayeres' class="btn mainMenuBtnSelectJogadores" type="submit">Dois
+                        Jogador</button>
+                    <div id='SelectedTwoPlayeres' class="mainMenuSelectedJogadores"></div>
+                </div>
+                <div id="CardTwoPlayers" class="mainMenuCardJogador">
                     <div class="row">
                         <h4 class="mainMenuFontJogador">Jogador 2</h4>
                     </div>
@@ -52,12 +68,12 @@
                     </div>
                     <div class="row mainMenuInputJogador">
                         <form action="" class="">
-                            <input type="text" class="mainMenuInput">
+                            <input  id="NamePlayerTwo" type="text" class="mainMenuInput">
                         </form>
                     </div>
                     <div class="row">
                         <h4 class="mainMenuFontJogador">Icone:</h4>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <div class="col-2">
@@ -66,15 +82,15 @@
                         <h4 class="mainMenuTitleScore"># Rodadas:</h4>
                     </div>
                     <div class="row">
-                        <div class="col-8">
-                            20
+                        <div id="ScoreMax" class="col-8">
+                            1
                         </div>
                         <div class="col-4" style="right: 15%;">
                             <div class="row h-50">
-                                <button class="btn mainMenuBtnPlus" type="submit"></button>
+                                <button id="btnPlusScoreMax" class="btn mainMenuBtnPlus" type="submit"></button>
                             </div>
                             <div class="row h-50">
-                                <button class="btn mainMenuBtnMin" type="submit"></button>
+                                <button id="btnLessScoreMax" class="btn mainMenuBtnMin" type="submit"></button>
                             </div>
                         </div>
                     </div>
@@ -83,8 +99,82 @@
             <div class="col-4">
                 <div class="mainMenuRegras">
                     <p>
-                        O  <b style="color: #EB676E;">JOGO DA VELHA</b> é um jogo e passatempo popular. É um jogo de regras extremamente simples, que não traz grandes dificuldades para seus jogadores e é facilmente aprendido. A origem é desconhecida, com indicações de que pode ter começado no antigo Egito, onde foram encontrados tabuleiros esculpidos na rocha, que teriam mais de 3.500 anos. (Wikipedia, 2020)
+                        O <b style="color: #EB676E;">JOGO DA VELHA</b> é um jogo e passatempo popular. É um jogo de
+                        regras extremamente simples, que não traz grandes dificuldades para seus jogadores e é
+                        facilmente aprendido. A origem é desconhecida, com indicações de que pode ter começado no antigo
+                        Egito, onde foram encontrados tabuleiros esculpidos na rocha, que teriam mais de 3.500 anos.
+                        (Wikipedia, 2020)
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameBoard" class="container-fluid h-100 w-85" style="display: block;">
+        <div class="row  h-100 boardGame">
+            <div id="div_bashboard" class="col-8">
+                <div class="row h-100 gridgame">
+                    
+                </div>
+                <!-- <div id="row_1" class="row">
+                    <div id="div_grid_1_1" class="col-4">
+                        <h1 id="grid_1_1" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_1_2" class="col-4">
+                        <h1 id="grid_1_2" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_1_3" class="col-4">
+                        <h1 id="grid_1_3" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                </div>
+                <div id="row_2" class="row">
+                    <div id="div_grid_2_1" class="col-4">
+                        <h1 id="grid_2_1" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_2_2" class="col-4">
+                        <h1 id="grid_2_2" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_2_3" class="col-4">
+                        <h1 id="grid_2_3" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                </div>
+                <div id="row_3" class="row">
+                    <div id="div_grid_3_1" class="col-4">
+                        <h1 id="grid_3_1" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_3_2" class="col-4">
+                        <h1 id="grid_3_2" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                    <div id="div_grid_3_3" class="col-4">
+                        <h1 id="grid_3_3" class="fonteEspecial">&nbsp;</h1>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-4">
+                <div id="NamePlayeOneLabel" class="NamePlayers NamePlayers-Frist">
+                    Douglas
+                </div>
+                <div id="NamePlayerTwoLabel" class="NamePlayers NamePlayers-Second">
+                    Priscila
+                </div>
+                <div class="row LabelScore">
+                    <div id="ScorePlayerOne" class="col">
+                        0
+                    </div>
+                    <div id="ScorePlayerTwo" class="col">
+                        0
+                    </div>
+                </div>
+                <div class="row FlagScorePoss">
+                    <div class="col FlagScore">
+                        &nbsp;
+                    </div>
+                    <div class="col FlagScore">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="row cardBtnSair">
+                    <button type="button" class="btn btnSair"></button>
                 </div>
             </div>
         </div>
@@ -102,8 +192,10 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-    <!-- Main JS -->
-    <script src="./js/main.js"></script>
+    <!-- Game JS -->
+    <script src="./js/game.js"></script>
+    <!-- Display JS -->
+    <script src="./js/display.js"></script>
 </body>
 
 </html>
