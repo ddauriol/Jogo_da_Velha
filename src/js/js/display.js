@@ -1,6 +1,8 @@
 const CardTwoPlayers = document.getElementById('CardTwoPlayers')
-const SelectedTwoPlayeres = document.getElementById('SelectedTwoPlayeres')
+const SelectedTwoPlayers = document.getElementById('SelectedTwoPlayers')
 const SelectedOnePlayer = document.getElementById('SelectedOnePlayer')
+const SelectedTwoPlayersHiden = document.getElementById('SelectedTwoPlayersHiden')
+const SelectedOnePlayerHiden = document.getElementById('SelectedOnePlayerHiden')
 const ScoreMax = document.getElementById('ScoreMax')
 const MensagemAlert = document.getElementById('MensagemAlert')
 const Alert = document.getElementById('Alert')
@@ -46,15 +48,19 @@ document.addEventListener('click', function(e) {
 
 function TwoPlayeres(){
     CardTwoPlayers.style.display = 'Block'
-    SelectedTwoPlayeres.style.display = 'Block'
+    SelectedTwoPlayers.style.display = 'Block'
+    SelectedTwoPlayersHiden.style.display = 'none'
     SelectedOnePlayer.style.display = 'none'
+    SelectedOnePlayerHiden.style.display = 'Block'
     NumberPlayes = 2
 }
 
 function OnePlayeres(){
     CardTwoPlayers.style.display = 'none'
-    SelectedTwoPlayeres.style.display = 'none'
+    SelectedTwoPlayers.style.display = 'none'
+    SelectedTwoPlayersHiden.style.display = 'Block'
     SelectedOnePlayer.style.display = 'Block'
+    SelectedOnePlayerHiden.style.display = 'none'
     NumberPlayes = 1
 }
 
@@ -107,6 +113,7 @@ async function loadGameBoard(){
 function ExitGame(){
     mainMenu.style.display = 'Block'
     gameBoard.style.display = 'none'
+    restartGame()
     TwoPlayeres()
     ResetScoreMax()
     UpdateScore()    

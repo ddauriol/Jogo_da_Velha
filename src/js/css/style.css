@@ -102,10 +102,6 @@ html, body{
 .mainMenuCardJogador{
     position: relative;
     top: 37.5%;
-    background-image: url('/src/js/img/main/quadro_jogador.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
     width: 100%;
     height: 28%;
 }
@@ -128,19 +124,19 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 90%;
-    height: 15%;
+    width: 100%;
+    height: 25%;
 }
 
 .mainMenuInput{
     font-family: 'Indie Flower', cursive;
     background-color: black;
     color: var(--color-branca);
-    margin-left: 5%;
+    margin-left: 2.5%;
     margin-top: 6px;
     border: 0px;
-    height: 72.5%;
-    width: 70%;
+    height: 85%;
+    width: 85%;
 }
 
 .mainMenuCardScore{

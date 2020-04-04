@@ -97,6 +97,7 @@ var win = {
 
 let player = 1
 let vencedor = ''
+let vencedorFinal = ''
 
 // Monitorando clicks
 document.addEventListener('click', function (e) {
@@ -104,7 +105,7 @@ document.addEventListener('click', function (e) {
     var target = e.target || e.srcElement,
         TextId = target.id;
 
-    if (vencedor != '') {
+    if (vencedorFinal != '') {
         document.getElementById('div_resultadoModal').innerText = 'O ' + vencedor + ' ganhou.'
         $('#resultadoModal').modal('show')
     } else {
@@ -145,7 +146,12 @@ document.addEventListener('click', function (e) {
                 getPlayerNames()
                 vencedor = NamePlayerOneValue
                 document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerOneValue + ' ganhou.'
-                $('#resultadoModal').modal('show')
+                ScorePlayerOneValue = ScorePlayerOneValue + 1
+                UpdateScore()
+                setTimeout(function () {
+                    restartGrid()
+                }, 2000);
+                sum_x = 0
                 return
             }
         });
@@ -164,7 +170,12 @@ document.addEventListener('click', function (e) {
                 getPlayerNames()
                 vencedor = NamePlayerTwoValue
                 document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerTwoValue + ' ganhou.'
-                $('#resultadoModal').modal('show')
+                ScorePlayerTwoValue = ScorePlayerTwoValue + 1
+                UpdateScore()
+                setTimeout(function () {
+                    restartGrid()
+                }, 2000);
+                sum_o = 0
                 return
             }
         });
@@ -177,5 +188,10 @@ function restartGrid(){
         dashboard[key] = 0
         document.getElementById(key).innerHTML = '<h1 id=' + key + ' style="font-size: 15vh;">&nbsp;</h1>'
     });
-    
+}
+
+function restartGame(){
+    ScorePlayerTwoValue = 0
+    ScorePlayerTwoValue = 0
+    restartGrid()
 }
