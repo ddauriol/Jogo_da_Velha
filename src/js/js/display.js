@@ -14,6 +14,9 @@ const mainMenu = document.getElementById('mainMenu')
 const gameBoard = document.getElementById('gameBoard')
 const ScorePlayerOne = document.getElementById('ScorePlayerOne')
 const ScorePlayerTwo = document.getElementById('ScorePlayerTwo')
+const PlayerWinner = document.getElementById('PlayerWinner')
+const PlayerOneFinish = document.getElementById('PlayerOneFinish')
+const PlayerTwoFinish = document.getElementById('PlayerTwoFinish')
 
 let ScoreMaxValue = 0
 let NumberPlayes = 2
@@ -139,10 +142,16 @@ function getPlayerNames(){
         NamePlayerTwoValue = "BOT"
     }
     NamePlayerOneValue = NamePlayerOne.value
-    
+}
+
+function loadWinner(PlayerWinnerString){
+    PlayerWinner.innerHTML = PlayerWinnerString
+    PlayerOneFinish.innerHTML = ScorePlayerOneValue + ' ' + NamePlayerOneValue
+    PlayerTwoFinish.innerHTML = ScorePlayerTwoValue + ' ' + NamePlayerTwoValue
 }
 
 TwoPlayeres()
 ResetScoreMax()
 UpdateScore()
 getPlayerNames()
+$('#resultadoModal').modal('show')

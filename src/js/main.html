@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!-- Div inicial, SetUp Game -->
     <div id="mainMenu" class="container-fluid h-100 w-85" style="display: block;">
         <div id="Alert" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
             <strong id="MensagemAlert"></strong>
@@ -100,6 +101,7 @@
         </div>
     </div>
 
+    <!-- Div Game, Board principal -->
     <div id="gameBoard" class="container-fluid h-100 w-85" style="display: none;">
         <div class="row  h-100 boardGame">
             <div id="div_bashboard" class="col-8">
@@ -173,21 +175,24 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Div Modal - Vitória -->
     <div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="resultadoModalLabel">Resultado</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="div_resultadoModal" class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-content winCard">
+                <div class="modal-body">
+                    <div class="row h-25 winCardTitle">
+                        <div id="PlayerWinner" class="col">BOT</div>
+                    </div>
+                    <div class="row winCardPlayers">
+                        <div id='PlayerOneFinish' class="col">0 Jogador 1</div>
+                    </div>
+                    <div class="row winCardPlayers">
+                        <div id="PlayerTwoFinish" class="col">0 Jogador 2</div>
+                    </div>
+                    <div class="row winCardBtnBack">
+                        <button type="button" class="btn btnBack" data-dismiss="modal"></button>
+                    </div>
                 </div>
             </div>
         </div>

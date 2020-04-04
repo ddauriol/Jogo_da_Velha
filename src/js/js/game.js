@@ -106,7 +106,7 @@ document.addEventListener('click', function (e) {
         TextId = target.id;
 
     if (vencedorFinal != '') {
-        document.getElementById('div_resultadoModal').innerText = 'O ' + vencedor + ' ganhou.'
+        loadWinner(vencedorFinal)
         $('#resultadoModal').modal('show')
     } else {
 
@@ -145,13 +145,19 @@ document.addEventListener('click', function (e) {
                 console.log('Jogador X - ' + sum_x)
                 getPlayerNames()
                 vencedor = NamePlayerOneValue
-                document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerOneValue + ' ganhou.'
                 ScorePlayerOneValue = ScorePlayerOneValue + 1
                 UpdateScore()
                 setTimeout(function () {
                     restartGrid()
                 }, 2000);
                 sum_x = 0
+                if (ScoreMaxValue == ScorePlayerOneValue){
+                    loadWinner(NamePlayerOneValue)
+                    setTimeout(function () {
+                        ExitGame()
+                    }, 2000);
+                    $('#resultadoModal').modal('show')
+                }
                 return
             }
         });
@@ -169,13 +175,19 @@ document.addEventListener('click', function (e) {
                 console.log('Jogador O - ' + sum_o)
                 getPlayerNames()
                 vencedor = NamePlayerTwoValue
-                document.getElementById('div_resultadoModal').innerText = 'O ' + NamePlayerTwoValue + ' ganhou.'
                 ScorePlayerTwoValue = ScorePlayerTwoValue + 1
                 UpdateScore()
                 setTimeout(function () {
                     restartGrid()
                 }, 2000);
                 sum_o = 0
+                if (ScoreMaxValue == ScorePlayerTwoValue){
+                    loadWinner(NamePlayerTwoValue)
+                    setTimeout(function () {
+                        ExitGame()
+                    }, 2000);
+                    $('#resultadoModal').modal('show')
+                }
                 return
             }
         });
@@ -191,7 +203,7 @@ function restartGrid(){
 }
 
 function restartGame(){
-    ScorePlayerTwoValue = 0
+    ScorePlayerOneValue = 0
     ScorePlayerTwoValue = 0
     restartGrid()
 }
