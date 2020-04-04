@@ -47,6 +47,9 @@ document.addEventListener('click', function(e) {
     if (TextId == 'btnSair'){
         ExitGame()
     }
+    if (TextId == 'btnRset'){
+        restartGrid()
+    }
 }, false);
 
 function TwoPlayeres(){
@@ -154,4 +157,3 @@ TwoPlayeres()
 ResetScoreMax()
 UpdateScore()
 getPlayerNames()
-$('#resultadoModal').modal('show')

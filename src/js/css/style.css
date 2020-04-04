@@ -189,6 +189,7 @@ html, body{
     text-align: center;
     align-items: center;
     justify-content: center;
+    cursor:pointer;
 }
 
 .NamePlayers{
@@ -251,6 +252,17 @@ html, body{
     background-repeat: no-repeat;
     width: 8.5vw;
     height: 7vh;
+}
+
+.btnReset{
+    margin: auto;
+    background-image: url('/src/js/img/game/reset.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 6vw;
+    height: 5vw;
+    position: relative;
+    top: 75%
 }
 
 .gridGame{
