@@ -11,16 +11,16 @@
 
 @font-face {
     font-family: "Sketch Block";
-    src: url("/src/js/fonts/Sketch_Block.ttf");
+    src: url("../fonts/Sketch_Block.ttf");
 
     font-family: "Made With";
-    src: url("/src/js/fonts/MadeWithB.ttf");
+    src: url("../fonts/MadeWithB.ttf");
     
     font-family: "Sleep on the moon";
-    src: url("/src/js/fonts/SleepOnTheMoon.ttf");
+    src: url("../fonts/SleepOnTheMoon.ttf");
 
     font-family: "Pencil Pete";
-    src: url("/src/js/fonts/PPETRIAL.ttf");
+    src: url("../fonts/PPETRIAL.ttf");
 }
 
 html, body{
@@ -54,7 +54,7 @@ html, body{
 }
 
 .mainMenuBackGroud{
-    background-image: url('/src/js/img/main/background.png') !important;
+    background-image: url('../img/main/background.png') !important;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -74,7 +74,7 @@ html, body{
     position: relative;
     top: 75vh;
     margin-left: -20%;
-    background-image: url('/src/js/img/main/botao.png') !important;
+    background-image: url('../img/main/botao.png') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -104,7 +104,7 @@ html, body{
 }
 
 .mainMenuSelectedJogadores{
-    background-image: url('/src/js/img/main/selected.png');
+    background-image: url('../img/main/selected.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -133,7 +133,7 @@ html, body{
     margin-top: 2px;
     margin-bottom: 5px;
     margin-left: 5%;
-    background-image: url('/src/js/img/main/input_text.png');
+    background-image: url('../img/main/input_text.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -176,7 +176,7 @@ html, body{
     position: relative;
     margin: auto;
     margin-bottom: 2px;
-    background-image: url('/src/js/img/main/remove.png');
+    background-image: url('../img/main/remove.png');
     background-repeat: no-repeat;
     background-position: top;
     width: 100%;
@@ -187,7 +187,7 @@ html, body{
     position: relative;
     margin: auto;
     margin-bottom: 2px;
-    background-image: url('/src/js/img/main/pluss.png');
+    background-image: url('../img/main/pluss.png');
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100%;
@@ -236,14 +236,14 @@ html, body{
 
 .FlagScore{
     height: 8vh;
-    background-image: url('/src/js/img/game/flag.png');
+    background-image: url('../img/game/flag.png');
     background-size: 36%;
     background-repeat: no-repeat;
     background-position: top;
 }
 
 .boardGame{
-    background-image: url('/src/js/img/game/Board-BackGround.png');
+    background-image: url('../img/game/Board-BackGround.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -259,7 +259,7 @@ html, body{
 
 .btnSair{
     margin: auto;
-    background-image: url('/src/js/img/btn-exit.svg');
+    background-image: url('../img/btn-exit.svg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 8.5vw;
@@ -268,7 +268,7 @@ html, body{
 
 .btnReset{
     margin: auto;
-    background-image: url('/src/js/img/game/reset.png');
+    background-image: url('../img/game/reset.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 6vw;
@@ -279,14 +279,14 @@ html, body{
 
 .gridGame{
     position: relative;
-    background-image: url('/src/js/img/game/grid.png');
+    background-image: url('../img/game/grid.png');
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .winCard{
-    background-image: url('/src/js/img/win/card.png');
+    background-image: url('../img/win/card.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -324,7 +324,7 @@ html, body{
 
 .btnBack{
     margin: auto;
-    background-image: url('/src/js/img/win/exit.png');
+    background-image: url('../img/win/exit.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 9vw;

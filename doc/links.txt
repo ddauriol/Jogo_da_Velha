@@ -4,3 +4,5 @@ https://dafont.com
 https://github.com/codigofalado
 
 https://pt.wikipedia.org/wiki/Jogo_da_velha
+
+https://github.com/daneden/animate.css
