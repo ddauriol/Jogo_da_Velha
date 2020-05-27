@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonte Especial -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="./css/animate.css" />
+
+    <title>Jogo da Velha</title>
+  </head>
+
+  <body>
+    <!-- Div inicial, SetUp Game -->
+    <div id="mainMenu" class="container-fluid h-100 w-85 zoomIn animated fast">
+      <div
+        id="Alert"
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+        style="display: none;"
+      >
+        <strong id="MensagemAlert"></strong>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div
+        id="mainMenuBackGroud"
+        class="row h-100 mainMenuBackGroud skin-black"
+      >
+        <div class="col-1"></div>
+        <div class="col-2 text-center">
+          <div class="mainMenuSelectJogadores">
+            <button
+              id="btnOnePlayer"
+              class="btn mainMenuBtnSelectJogadores"
+              type="submit"
+            >
+              Um Jogador
+            </button>
+            <div id="SelectedOnePlayer" class="mainMenuSelectedJogadores"></div>
+            <div id="SelectedOnePlayerHiden" style="height: 1.5vh;"></div>
+          </div>
+          <div class="mainMenuCardJogador">
+            <div class="row">
+              <h4 class="mainMenuFontJogador">Jogador 1</h4>
+            </div>
+            <div class="row mainMenuInputJogador">
+              <form action="" class="">
+                <input id="NamePlayerOne" type="text" class="mainMenuInput" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <button
+            id="btnJogar"
+            class="btn mainMenuBtnJogar"
+            type="submit"
+          ></button>
+        </div>
+        <div class="col-2">
+          <div class="mainMenuSelectJogadores">
+            <button
+              id="btnTwoPlayeres"
+              class="btn mainMenuBtnSelectJogadores"
+              type="submit"
+            >
+              Dois Jogador
+            </button>
+            <div
+              id="SelectedTwoPlayers"
+              class="mainMenuSelectedJogadores"
+            ></div>
+            <div id="SelectedTwoPlayersHiden" style="height: 1.5vh;"></div>
+          </div>
+          <div id="CardTwoPlayers" class="mainMenuCardJogador">
+            <div class="row">
+              <h4 class="mainMenuFontJogador">Jogador 2</h4>
+            </div>
+            <div class="row mainMenuInputJogador">
+              <form action="" class="">
+                <input id="NamePlayerTwo" type="text" class="mainMenuInput" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="mainMenuCardScore">
+            <div class="row">
+              <h4 class="mainMenuTitleScore"># Rodadas:</h4>
+            </div>
+            <div class="row">
+              <div id="ScoreMax" class="col-8">
+                1
+              </div>
+              <div class="col-4" style="right: 15%;">
+                <div class="row h-50">
+                  <button
+                    id="btnPlusScoreMax"
+                    class="btn mainMenuBtnPlus"
+                    type="submit"
+                  ></button>
+                </div>
+                <div class="row h-50">
+                  <button
+                    id="btnLessScoreMax"
+                    class="btn mainMenuBtnMin"
+                    type="submit"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mainMenuRegras">
+            <p>
+              O <b style="color: #eb676e;">JOGO DA VELHA</b> é um jogo e
+              passatempo popular. É um jogo de regras extremamente simples, que
+              não traz grandes dificuldades para seus jogadores e é facilmente
+              aprendido. A origem é desconhecida, com indicações de que pode ter
+              começado no antigo Egito, onde foram encontrados tabuleiros
+              esculpidos na rocha, que teriam mais de 3.500 anos. (Wikipedia,
+              2020)
+            </p>
+            <div class="col-12">
+              <button
+                id="btnChangeSkin"
+                class="btn change-skins"
+                type="submit"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Div Game, Board principal -->
+    <div
+      id="gameBoard"
+      class="container-fluid h-100 w-85 zoomIn animated"
+      style="display: none;"
+    >
+      <div id="boardGameBG" class="row h-100 boardGame boardGame-black">
+        <div id="div_bashboard" class="col-8">
+          <div class="row h-100 gridGame">
+            <div class="col-2"></div>
+            <div class="col-8 h-65" style="top: 18vh;">
+              <div id="row_1" class="row h-33">
+                <div id="div_grid_1_1" class="col GameMark">
+                  <h1 id="grid_1_1" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_1_2" class="col GameMark">
+                  <h1 id="grid_1_2" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_1_3" class="col GameMark">
+                  <h1 id="grid_1_3" class="">&nbsp;</h1>
+                </div>
+              </div>
+              <div id="row_2" class="row h-33">
+                <div id="div_grid_2_1" class="col GameMark">
+                  <h1 id="grid_2_1" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_2_2" class="col GameMark">
+                  <h1 id="grid_2_2" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_2_3" class="col GameMark">
+                  <h1 id="grid_2_3" class="">&nbsp;</h1>
+                </div>
+              </div>
+              <div id="row_3" class="row h-33">
+                <div id="div_grid_3_1" class="col GameMark">
+                  <h1 id="grid_3_1" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_3_2" class="col GameMark">
+                  <h1 id="grid_3_2" class="">&nbsp;</h1>
+                </div>
+                <div id="div_grid_3_3" class="col GameMark">
+                  <h1 id="grid_3_3" style="font-size: 12vh;">&nbsp;</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 h-100">
+              <button id="btnRset" type="button" class="btn btnReset"></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="NamePlayerOneLabel" class="NamePlayers NamePlayers-Frist">
+            PlayerOne
+          </div>
+          <div id="NamePlayerTwoLabel" class="NamePlayers NamePlayers-Second">
+            PlayerTwo
+          </div>
+          <div class="row LabelScore">
+            <div id="ScorePlayerOne" class="col">
+              0
+            </div>
+            <div id="ScorePlayerTwo" class="col">
+              0
+            </div>
+          </div>
+          <div class="row FlagScorePoss">
+            <div class="col FlagScore">
+              &nbsp;
+            </div>
+            <div class="col FlagScore">
+              &nbsp;
+            </div>
+          </div>
+          <div class="row cardBtnSair">
+            <button id="btnSair" type="button" class="btn btnSair"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Div Modal - Vitória -->
+    <div
+      class="modal"
+      id="resultadoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="resultadoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog zoomIn animated" role="document">
+        <div class="modal-content winCard">
+          <div class="modal-body">
+            <div class="row h-25 winCardTitle">
+              <div id="PlayerWinner" class="col">BOT</div>
+            </div>
+            <div class="row winCardPlayers">
+              <div id="PlayerOneFinish" class="col">0 Jogador 1</div>
+            </div>
+            <div class="row winCardPlayers">
+              <div id="PlayerTwoFinish" class="col">0 Jogador 2</div>
+            </div>
+            <div class="row winCardBtnBack">
+              <button
+                type="button"
+                class="btn btnBack"
+                data-dismiss="modal"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Display JS -->
+    <script src="./js/display.js"></script>
+    <!-- Game JS -->
+    <script src="./js/game.js"></script>
+    <!-- BOT JS -->
+    <script src="./js/bot.js"></script>
+  </body>
+</html>

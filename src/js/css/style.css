@@ -1,332 +1,360 @@
 :root {
-    --color-roxa: #8A8DB1;
-    --color-branca: #FFFFFF;
-    --color-verde-clara: #8AB19F;
-    --color-amarela: #EFD473;
-    --color-verde: #548479;
-    --color-vermelha: #EB676E;
-    --color-amarelo-esverdiado: #C3CA5D;
-
-  }
-
-@font-face {
-    font-family: "Sketch Block";
-    src: url("/src/js/fonts/Sketch_Block.ttf");
-
-    font-family: "Made With";
-    src: url("/src/js/fonts/MadeWithB.ttf");
-    
-    font-family: "Sleep on the moon";
-    src: url("/src/js/fonts/SleepOnTheMoon.ttf");
-
-    font-family: "Pencil Pete";
-    src: url("/src/js/fonts/PPETRIAL.ttf");
+  --color-roxa: #8a8db1;
+  --color-branca: #ffffff;
+  --color-verde-clara: #8ab19f;
+  --color-amarela: #efd473;
+  --color-verde: #548479;
+  --color-vermelha: #eb676e;
+  --color-amarelo-esverdiado: #c3ca5d;
 }
 
-html, body{
-    background-color: black;
-    height: 100%;
-    width: 100%;
+@font-face {
+  font-family: "Sketch Block";
+  src: url("/src/js/fonts/Sketch_Block.ttf");
+
+  font-family: "Made With";
+  src: url("/src/js/fonts/MadeWithB.ttf");
+
+  font-family: "Sleep on the moon";
+  src: url("/src/js/fonts/SleepOnTheMoon.ttf");
+
+  font-family: "Pencil Pete";
+  src: url("/src/js/fonts/PPETRIAL.ttf");
+}
+
+html,
+body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
 .w-85 {
-    width: 85% !important
+  width: 85% !important;
 }
 
 .h-65 {
-    height: 65% !important
+  height: 65% !important;
 }
 
 .h-33 {
-    height: 33% !important
+  height: 33% !important;
 }
 
-.HiddenDiv{
-    opacity: 0;
-    transition: opacity 0.5s linear, display 0.5s linear;
+.HiddenDiv {
+  opacity: 0;
+  transition: opacity 0.5s linear, display 0.5s linear;
 }
 
-.ShowDiv{
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 1s;
-    transition: opacity 1.5s linear, display 1.5s linear;
+.ShowDiv {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 1s;
+  transition: opacity 1.5s linear, display 1.5s linear;
 }
 
-.mainMenuBackGroud{
-    background-image: url('/src/js/img/main/background.png') !important;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+.mainMenuBackGroud {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.mainMenuRegras{
-    position: relative;
-    margin: 10%;
-    top: 30%;
-    font-family: 'Pencil Pete';
-    color: var(--color-branca);
-    font-size: 1.3vw;
-    text-align: center;
+.skin-black {
+  background-image: url("/src/js/img/main/background.png") !important;
 }
 
-.mainMenuBtnJogar{
-    position: relative;
-    top: 75vh;
-    margin-left: -20%;
-    background-image: url('/src/js/img/main/botao.png') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 140%;
-    height: 5.5%;
+.skin-red {
+  background-image: url("/src/js/img/main/backgroundRed.jpg") !important;
 }
 
-.mainMenuSelectJogadores{
-    position: relative;
-    top: 32.5%;
-    margin-left: auto;
-    margin-right: auto;
+.skin-green {
+  background-image: url("/src/js/img/main/backgroundGreen.jpg") !important;
 }
 
-.mainMenuBtnSelectJogadores{
-    position: relative;
-    text-align: center;
-    font-family: 'Pencil Pete';
-    color: var(--color-verde);
-    font-size: 2vw;
-    margin-left: auto;
-    margin-right: auto;
+.mainMenuRegras {
+  position: relative;
+  margin: 10%;
+  top: 30%;
+  font-family: "Pencil Pete";
+  color: var(--color-branca);
+  font-size: 1.3vw;
+  text-align: center;
 }
 
-.mainMenuBtnSelectJogadores:hover{
-    color: var(--color-vermelha) !important;
+.mainMenuBtnJogar {
+  position: relative;
+  top: 75vh;
+  margin-left: -20%;
+  background-image: url("/src/js/img/main/botao.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 140%;
+  height: 5.5%;
 }
 
-.mainMenuSelectedJogadores{
-    background-image: url('/src/js/img/main/selected.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100%;
-    height: 1.5vh;
+.mainMenuSelectJogadores {
+  position: relative;
+  top: 32.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mainMenuCardJogador{
-    position: relative;
-    top: 37.5%;
-    width: 100%;
-    height: 28%;
+.mainMenuBtnSelectJogadores {
+  position: relative;
+  text-align: center;
+  font-family: "Pencil Pete";
+  color: var(--color-amarela);
+  font-size: 2vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mainMenuFontJogador{
-    font-family: 'Indie Flower', cursive;
-    color: var(--color-amarela);
-    font-size: 1.2vw;
-    text-align: left;
-    margin-left: 15%;
-    margin-top: 5%;
+.mainMenuBtnSelectJogadores:hover {
+  color: var(--color-vermelha) !important;
 }
 
-.mainMenuInputJogador{
-    position: relative;
-    margin-top: 2px;
-    margin-bottom: 5px;
-    margin-left: 5%;
-    background-image: url('/src/js/img/main/input_text.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 25%;
+.mainMenuSelectedJogadores {
+  background-image: url("/src/js/img/main/selected.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 1.5vh;
 }
 
-.mainMenuInput{
-    font-family: 'Indie Flower', cursive;
-    background-color: black;
-    color: var(--color-branca);
-    margin-left: 2.5%;
-    margin-top: 6px;
-    border: 0px;
-    height: 85%;
-    width: 85%;
+.mainMenuCardJogador {
+  position: relative;
+  top: 37.5%;
+  width: 100%;
+  height: 28%;
 }
 
-.mainMenuCardScore{
-    font-family: 'Sketch Block';
-    font-size: 5vw;
-    color: var(--color-amarela);
-    text-align: right;
-    position: relative;
-    top: 45%;
-    width: 100%;
-    height: 28%;
+.mainMenuFontJogador {
+  font-family: "Indie Flower", cursive;
+  color: var(--color-amarela);
+  font-size: 1.2vw;
+  text-align: left;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 
-.mainMenuTitleScore{
-    text-align: center;
-    font-family: 'Pencil Pete';
-    color: var(--color-verde);
-    font-size: 2vw;
-    margin-left: auto;
-    margin-right: auto;
+.mainMenuInputJogador {
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  background-image: url("/src/js/img/main/input_text.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 25%;
 }
 
-.mainMenuBtnMin{
-    position: relative;
-    margin: auto;
-    margin-bottom: 2px;
-    background-image: url('/src/js/img/main/remove.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100%;
-    height: 90%;
+.mainMenuInput {
+  font-family: "Indie Flower", cursive;
+  background-color: transparent;
+  color: var(--color-branca);
+  margin-left: 2.5%;
+  margin-top: 6px;
+  border: 0px;
+  height: 85%;
+  width: 85%;
 }
 
-.mainMenuBtnPlus{
-    position: relative;
-    margin: auto;
-    margin-bottom: 2px;
-    background-image: url('/src/js/img/main/pluss.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    width: 100%;
-    height: 90%;
+.mainMenuCardScore {
+  font-family: "Sketch Block";
+  font-size: 5vw;
+  color: var(--color-amarela);
+  text-align: right;
+  position: relative;
+  top: 45%;
+  width: 100%;
+  height: 28%;
 }
 
-.GameMark{
-    font-family: 'Pencil Pete';
-    color: var(--color-branca);
-    font-size: 80px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    cursor:pointer;
+.mainMenuTitleScore {
+  text-align: center;
+  font-family: "Pencil Pete";
+  color: var(--color-verde);
+  font-size: 2vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.NamePlayers{
-    font-family: 'Sketch Block';
-    font-size: 2.5vw;
-    color:var(--color-amarela);
-    text-align: center;
-    position: relative;
+.mainMenuBtnMin {
+  position: relative;
+  margin: auto;
+  margin-bottom: 2px;
+  background-image: url("/src/js/img/main/remove.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 90%;
 }
 
-.NamePlayers-Frist{
-    top: 35vh;
+.mainMenuBtnPlus {
+  position: relative;
+  margin: auto;
+  margin-bottom: 2px;
+  background-image: url("/src/js/img/main/pluss.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 90%;
 }
 
-.NamePlayers-Second{
-    top: 42.5vh;
+.GameMark {
+  font-family: "Pencil Pete";
+  color: var(--color-branca);
+  font-size: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.LabelScore{
-    font-family: 'Sketch Block';
-    font-size: 6vh;
-    color: var(--color-amarela);
-    text-align: center;
-    position: relative;
-    top: 50vh;
+.NamePlayers {
+  font-family: "Sketch Block";
+  font-size: 2.5vw;
+  color: var(--color-amarela);
+  text-align: center;
+  position: relative;
 }
 
-.FlagScorePoss{
-    position: relative;
-    top: 48vh;
+.NamePlayers-Frist {
+  top: 35vh;
 }
 
-.FlagScore{
-    height: 8vh;
-    background-image: url('/src/js/img/game/flag.png');
-    background-size: 36%;
-    background-repeat: no-repeat;
-    background-position: top;
+.NamePlayers-Second {
+  top: 42.5vh;
 }
 
-.boardGame{
-    background-image: url('/src/js/img/game/Board-BackGround.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+.LabelScore {
+  font-family: "Sketch Block";
+  font-size: 6vh;
+  color: var(--color-amarela);
+  text-align: center;
+  position: relative;
+  top: 50vh;
 }
 
-.cardBtnSair{
-    position: relative;
-    width: 100%;
-    top: 50vh;
-    text-align: center;
-    align-items: center;
+.FlagScorePoss {
+  position: relative;
+  top: 48vh;
 }
 
-.btnSair{
-    margin: auto;
-    background-image: url('/src/js/img/btn-exit.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 8.5vw;
-    height: 7vh;
+.FlagScore {
+  height: 8vh;
+  background-image: url("/src/js/img/game/flag.png");
+  background-size: 36%;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
-.btnReset{
-    margin: auto;
-    background-image: url('/src/js/img/game/reset.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 6vw;
-    height: 5vw;
-    position: relative;
-    top: 75%
+.boardGame {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.gridGame{
-    position: relative;
-    background-image: url('/src/js/img/game/grid.png');
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
+.boardGame-black {
+  background-image: url("/src/js/img/game/Board-BackGround.png");
 }
 
-.winCard{
-    background-image: url('/src/js/img/win/card.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 66vh;
-    width: 54vh;
-    border-radius: 15px;
-    border: 1px;
-    border-color: black;
+.boardGame-red {
+  background-image: url("/src/js/img/game/Board-BackGroundRed.jpg");
 }
 
-.winCardTitle{
-    font-family: 'Sketch Block';
-    font-size: 3vw;
-    color: var(--color-amarela);
-    text-align: center;
-    position: relative;
-    top: 8%;
+.boardGame-green {
+  background-image: url("/src/js/img/game/Board-BackGroundGrenn.jpg");
 }
 
-.winCardPlayers{
-    font-family: 'Sketch Block';
-    font-size: 3vw;
-    color: var(--color-verde);
-    text-align: left;
-    position: relative;
-    top: 29%;
-    left: 25%;
+.cardBtnSair {
+  position: relative;
+  width: 100%;
+  top: 50vh;
+  text-align: center;
+  align-items: center;
 }
 
-.winCardBtnBack{
-    text-align: center;
-    position: relative;
-    top: 30%;
+.btnSair {
+  margin: auto;
+  background-image: url("/src/js/img/btn-exit.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8.5vw;
+  height: 7vh;
 }
 
-.btnBack{
-    margin: auto;
-    background-image: url('/src/js/img/win/exit.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 9vw;
-    height: 6vh;
+.btnReset {
+  margin: auto;
+  background-image: url("/src/js/img/game/reset.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 5vw;
+  position: relative;
+  top: 75%;
+}
+
+.gridGame {
+  position: relative;
+  background-image: url("/src/js/img/game/grid.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.winCard {
+  background-image: url("/src/js/img/win/card.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 66vh;
+  width: 54vh;
+  border-radius: 15px;
+  border: 1px;
+  border-color: black;
+}
+
+.winCardTitle {
+  font-family: "Sketch Block";
+  font-size: 3vw;
+  color: var(--color-amarela);
+  text-align: center;
+  position: relative;
+  top: 8%;
+}
+
+.winCardPlayers {
+  font-family: "Sketch Block";
+  font-size: 3vw;
+  color: var(--color-verde);
+  text-align: left;
+  position: relative;
+  top: 29%;
+  left: 25%;
+}
+
+.winCardBtnBack {
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+.btnBack {
+  margin: auto;
+  background-image: url("/src/js/img/win/exit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 9vw;
+  height: 6vh;
+}
+
+.change-skins {
+  height: 77px;
+  width: 93px;
+  background-image: url(../img/main/skins.png);
 }
